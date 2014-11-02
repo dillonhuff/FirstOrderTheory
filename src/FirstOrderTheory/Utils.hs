@@ -7,4 +7,5 @@ type Arity = Int
 
 type Sort = String
 
+sort :: String -> Sort
 sort str = str
