@@ -1,5 +1,7 @@
 module FirstOrderTheory.Theory(
   FirstOrderTheory(..),
+  PredicateDecl,
+  FunctionDecl,
   predicateDecl,
   functionDecl) where
 
@@ -11,13 +13,16 @@ import FirstOrderTheory.Utils
 data PredicateDecl = PredicateDecl Name Arity [Sort]
                      deriving (Eq, Ord)
 
+-- |Specify a new predicate declaration
 predicateDecl = PredicateDecl
 
 data FunctionDecl = FunctionDecl Name Arity [Sort] Sort
                     deriving (Eq, Ord)
 
+-- |Specify a new function declaration
 functionDecl = FunctionDecl
 
+-- |Description of a decidable first order theory
 class FirstOrderTheory t where
   theoryName :: t -> String
   sorts :: t -> Set Sort

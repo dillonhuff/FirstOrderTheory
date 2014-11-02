@@ -7,5 +7,6 @@ type Arity = Int
 
 type Sort = String
 
+-- |Make a new sort with the input name
 sort :: String -> Sort
 sort str = str
