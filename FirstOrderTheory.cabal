@@ -17,5 +17,5 @@ cabal-version:       >=1.8
 library
   exposed-modules:     FirstOrderTheory.Theory, FirstOrderTheory.Utils, FirstOrderTheory.Syntax
   -- other-modules:       
-  build-depends:       base ==4.6.*, containers
+  build-depends:       base >=4.6 && <4.9, containers
   hs-source-dirs:      src
